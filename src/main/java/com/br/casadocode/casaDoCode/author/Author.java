@@ -11,7 +11,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.Email;
-import javax.validation.constraints.Max;
 import javax.validation.constraints.NotBlank;
 import java.time.LocalDateTime;
 
@@ -29,9 +28,9 @@ public class Author {
     @Email
     private String email;
     @NotBlank
-    @Max(400)
     private String description;
     @CreationTimestamp
     private LocalDateTime date;
+    // TODO: 12/07/2022 Arrumar a data 
 
 }
