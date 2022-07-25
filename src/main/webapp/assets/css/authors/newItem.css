@@ -1,0 +1,45 @@
+.title {
+    font-family: "DejaVu Sans";
+    margin-left: 35px;
+}
+
+.create-new-author {
+    margin-left: 20px;
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 10px 10px;
+    margin: 6px 0;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    box-sizing: border-box;
+}
+
+label {
+    font-family: "DejaVu Sans";
+}
+
+div {
+    margin-right: 20px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.bt-submit {
+    color: black;
+    background: darkseagreen;
+    margin-top: 20px;
+    width: 100px;
+    height: 30px;
+    border-radius: 4px;
+}
+
+.error-msg {
+    color: crimson;
+    border-radius: 0 !important;
+    position: relative;
+    display: inline-block !important;
+    margin-top: 10px;
+}

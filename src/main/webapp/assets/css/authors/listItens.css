@@ -21,6 +21,11 @@
     background: aqua;
 }
 
+.table-authors tr:hover {
+    background-color: #D6EEEE;
+}
+
+
 .btn-create-author {
     color: black;
     background: darkseagreen;

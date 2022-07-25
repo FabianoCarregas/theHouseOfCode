@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <title>HouseOfTheBook</title>
-    <link rel="stylesheet" href="/assets/css/authors/listAuthors.css">
+    <link rel="stylesheet" href="/assets/css/authors/listItens.css">
 </head>
 <div>
     <h1 class="title-author">Authors</h1>

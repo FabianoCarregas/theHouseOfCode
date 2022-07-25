@@ -1,18 +1,20 @@
 package com.br.casadocode.casaDoCode.author;
 
 
+import com.br.casadocode.casaDoCode.book.Book;
+import com.br.casadocode.casaDoCode.enun.Genre;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import java.time.LocalDateTime;
+import java.util.List;
+
+import static javax.persistence.EnumType.*;
 
 @Entity
 @AllArgsConstructor
@@ -27,10 +29,16 @@ public class Author {
     private String name;
     @Email
     private String email;
-    @NotBlank
     private String description;
-    @CreationTimestamp
     private LocalDateTime date;
-    // TODO: 12/07/2022 Arrumar a data 
+    // TODO: 12/07/2022 Arrumar a data
+    @Enumerated(STRING)
+    private Genre genre;
+    private String nationality;
+    private boolean alive;
+
+    @OneToMany
+    @JoinColumn(name = "author_id")
+    private List<Book> book;
 
 }
