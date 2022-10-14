@@ -1,22 +1,36 @@
 package com.br.casadocode.casaDoCode.author;
-import lombok.AllArgsConstructor;
+import com.br.casadocode.casaDoCode.enums.Country;
+import com.br.casadocode.casaDoCode.enums.Genre;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
-
 import javax.validation.Valid;
 
-
-@RestController
-@AllArgsConstructor
+@Controller
+@RequiredArgsConstructor
 public class AuthorController {
 
     private final AuthorRepository repository;
 
-    @PostMapping("/author")
-    public String create(@RequestBody @Valid NewAuthorForm form){
+    @GetMapping("/author")
+    public String create(NewAuthorForm newAuthorForm, Model model) {
+
+        model.addAttribute("genres", Genre.values());
+        model.addAttribute("countries" , Country.values());
+        model.addAttribute("newAuthorForm", newAuthorForm);
+        return "author/newAuthor";
+    }
+
+    @PostMapping("/new/author")
+    public String save(@Valid NewAuthorForm form, BindingResult result, Model model){
+        if (result.hasErrors()) {
+            return create(form, model);
+        }
         repository.save(form.toEntity());
-        return "ok";
+        return "redirect:/author/newAuthor";
     }
 
 }
