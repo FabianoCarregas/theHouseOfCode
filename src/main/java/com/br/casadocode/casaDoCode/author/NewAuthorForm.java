@@ -1,18 +1,17 @@
 package com.br.casadocode.casaDoCode.author;
 
+import com.br.casadocode.casaDoCode.enums.Country;
+import com.br.casadocode.casaDoCode.enums.Genre;
 import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.Getter;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.type.LocalDateTimeType;
-import org.springframework.format.annotation.DateTimeFormat;
-
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import javax.validation.constraints.NotBlank;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 
 @Getter
+@Setter
 @AllArgsConstructor
+@NoArgsConstructor
 public class NewAuthorForm {
 
     @NotBlank
@@ -21,18 +20,13 @@ public class NewAuthorForm {
     @NotBlank
     private String email;
 
-    @NotBlank
     private String description;
 
-    @CreationTimestamp
-    private LocalDateTime date;
+    private Genre genre;
+
+    private Country country;
 
     public Author toEntity() {
-        return new Author(
-                null,
-                this.name,
-                this.email,
-                this.description,
-                this.date = LocalDateTime.now());
+        return new Author(name, email, description, genre, country);
     }
 }
