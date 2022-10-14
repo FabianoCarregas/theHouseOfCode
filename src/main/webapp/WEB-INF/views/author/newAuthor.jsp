@@ -12,20 +12,23 @@
 <body>
 <div class="container">
     <div class="row">
-        <h1>New author</h1>
+        <h1 class="title-wrapper">New author</h1>
     </div>
 
     <form action="/new/author" method="post" class="form-post">
         <div class="wrapper-row">
             <label class="form-title-label">Name</label>
+            <form:errors path="newAuthorForm.name" cssClass="error-msg"/>
             <input name="name" class="form-input" type="text" >
         </div>
         <div class="wrapper-row">
             <label class="form-title-label">Email</label>
+            <form:errors path="newAuthorForm.email" cssClass="error-msg"/>
             <input name="email" class="form-input" type="text">
         </div>
         <div class="wrapper-row">
             <label class="form-title-label">Description</label>
+            <form:errors path="newAuthorForm.description" cssClass="error-msg"/>
             <input name="description" class="form-input" type="text">
         </div>
         <div class="wrapper-row">
@@ -49,7 +52,6 @@
         </div>
     </form>
 
-    <link rel="stylesheet" href="/webjars/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/css/style.css">
     </head>
 </div>

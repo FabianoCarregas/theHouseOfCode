@@ -16,11 +16,14 @@ public class NewAuthorForm {
 
     @NotBlank
     private String name;
+
     @NotBlank
     private String email;
-    @NotBlank
+
     private String description;
+
     private Genre genre;
+
     private Country country;
 
     public Author toEntity() {

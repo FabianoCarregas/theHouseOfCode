@@ -8,6 +8,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Getter
@@ -19,16 +20,18 @@ public class Book {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotNull
     private String name;
 
+    @NotNull
     private String code;
 
     @Enumerated(EnumType.STRING)
     private Genre genre;
 
-    private boolean hardcover;
+    private boolean hardCover = false;
 
-    private boolean onSale;
+    private boolean onSale = false;
 
     private int pages;
 
@@ -39,11 +42,11 @@ public class Book {
     private Recording record;
 
 
-    public Book(String name, String code, Genre genre, boolean hardcover, boolean onSale, int pages, Author author) {
+    public Book(String name, String code, Genre genre, boolean hardCover, boolean onSale, int pages, Author author) {
         this.name = name;
         this.code = code;
         this.genre = genre;
-        this.hardcover = hardcover;
+        this.hardCover = hardCover;
         this.onSale = onSale;
         this.pages = pages;
         this.author = author;

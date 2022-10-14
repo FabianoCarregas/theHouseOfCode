@@ -8,6 +8,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import javax.validation.Valid;
+import java.util.List;
 
 @Controller
 @RequiredArgsConstructor
@@ -30,7 +31,15 @@ public class AuthorController {
             return create(form, model);
         }
         repository.save(form.toEntity());
-        return "redirect:/author/newAuthor";
+        return "redirect:/authors";
+    }
+
+    @GetMapping("/authors")
+    public String listAll(Model model) {
+        List<Author> authors = repository.findAll();
+
+        model.addAttribute("authors", authors);
+        return "author/authorsList";
     }
 
 }

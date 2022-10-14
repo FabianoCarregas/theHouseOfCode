@@ -12,16 +12,18 @@
 <body>
 <div class="container">
     <div class="row">
-        <h1>New Book</h1>
+        <h1 class="title-wrapper">New Book</h1>
     </div>
 
-    <form action="/new/author" method="post" class="form-post">
+    <form action="/new/book" method="post" class="form-post">
         <div class="wrapper-row">
             <label class="form-title-label">Name</label>
+            <form:errors path="newBookForm.name" cssClass="error-msg"/>
             <input name="name" class="form-input" type="text" >
         </div>
         <div class="wrapper-row">
             <label class="form-title-label">Code</label>
+            <form:errors path="newBookForm.code" cssClass="error-msg"/>
             <input name="code" class="form-input" type="text">
         </div>
         <div class="wrapper-row">
@@ -36,7 +38,7 @@
             <label class="form-title-label">Author</label>
             <select name="author" class="form-input" type="text">
             <c:forEach var="author" items="${authors}">
-                <option value="${author}">${author.name}</option>
+                <option value="${author.id}">${author.name}</option>
             </c:forEach>
             </select>
         </div>
@@ -57,7 +59,6 @@
         </div>
     </form>
 
-    <link rel="stylesheet" href="/webjars/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/css/style.css">
     </head>
 </div>

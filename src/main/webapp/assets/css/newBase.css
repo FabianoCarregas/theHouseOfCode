@@ -31,3 +31,67 @@ input[type=submit] {
     font-family: 'Source Sans Pro', sans-serif;
     padding: 6px 18px;
 }
+
+.title-wrapper {
+    font-family: "DejaVu Sans";
+    margin-left: 35px;
+}
+
+.table-wraper-list{
+    border-collapse: collapse;
+    margin-left: 30px;
+}
+
+.table-wraper-list th{
+    padding: 5px;
+    border: 1px solid #777;
+}
+
+.table-wraper-list td {
+    padding: 5px;
+    border: 1px solid #777;
+}
+.table-wraper-list th {
+    background: aqua;
+}
+
+.table-wraper-list tr:hover {
+    background-color: #D6EEEE;
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 10px 10px;
+    margin: 6px 0;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    box-sizing: border-box;
+}
+
+label {
+    font-family: "DejaVu Sans";
+}
+
+div {
+    margin-right: 20px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.bt-submit {
+    color: black;
+    background: darkseagreen;
+    margin-top: 20px;
+    width: 100px;
+    height: 30px;
+    border-radius: 4px;
+}
+
+.error-msg {
+    color: crimson;
+    border-radius: 0 !important;
+    position: relative;
+    display: inline-block !important;
+    margin-top: 10px;
+}
