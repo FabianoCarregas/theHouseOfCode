@@ -59,7 +59,6 @@
         </div>
     </form>
 
-    <link rel="stylesheet" href="/assets/css/style.css">
     </head>
 </div>
 

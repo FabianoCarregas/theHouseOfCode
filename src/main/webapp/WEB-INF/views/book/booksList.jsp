@@ -44,9 +44,6 @@
         </div>
         </body>
     </form>
-
-    <link rel="stylesheet" href="/webjars/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/assets/css/style.css">
     </head>
 </div>
 

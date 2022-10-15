@@ -2,11 +2,9 @@ package com.br.casadocode.casaDoCode.book;
 
 import com.br.casadocode.casaDoCode.author.Author;
 import com.br.casadocode.casaDoCode.enums.Genre;
-import com.br.casadocode.casaDoCode.record.Recording;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
@@ -37,10 +35,6 @@ public class Book {
 
     @ManyToOne
     private Author author;
-
-    @ManyToOne
-    private Recording record;
-
 
     public Book(String name, String code, Genre genre, boolean hardCover, boolean onSale, int pages, Author author) {
         this.name = name;
