@@ -14,35 +14,34 @@
     <div class="row">
         <h1 class="title-wrapper">Author's</h1>
     </div>
-        <form action="/author" method="get">
-            <body>
-            <div>
-                <table class="table-wraper-list">
+    <form action="/author" method="get">
+        <body>
+        <div>
+            <table class="table-wrapper-list">
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Description</th>
+                    <th>Genre</th>
+                    <th>Country</th>
+                </tr>
+                <c:forEach items="${authors}" var="author">
                     <tr>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Description</th>
-                        <th>Genre</th>
-                        <th>Country</th>
+                        <td>${author.name}</td>
+                        <td>${author.email}</td>
+                        <td>${author.description}</td>
+                        <td>${author.genre}</td>
+                        <td>${author.country}</td>
+                        <c:forEach var="book" items="${author.books}">
+                            <td>${book}</td>
+                        </c:forEach>
                     </tr>
-                    <c:forEach items="${authors}" var="author">
-                        <tr>
-                            <td>${author.name}</td>
-                            <td>${author.email}</td>
-                            <td>${author.description}</td>
-                            <td>${author.genre}</td>
-                            <td>${author.country}</td>
-                            <c:forEach var="book" items="${author.books}">
-                                <td>${book}</td>
-                            </c:forEach>
-                        </tr>
-                    </c:forEach>
-                </table>
-                <button class="btn-success">Create Author</button>
-            </div>
-            </body>
-        </form>
-    </head>
+                </c:forEach>
+            </table>
+            <button class="btn-success">Create Author</button>
+        </div>
+        </body>
+    </form>
 </div>
 
 </body>

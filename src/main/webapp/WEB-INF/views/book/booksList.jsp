@@ -14,11 +14,10 @@
     <div class="row">
         <h1 class="title-wrapper">Book's</h1>
     </div>
-
     <form action="/book" method="get">
         <body>
         <div>
-            <table class="table-wraper-list">
+            <table class="table-wrapper-list">
                 <tr>
                     <th>Name</th>
                     <th>Code</th>
@@ -44,7 +43,6 @@
         </div>
         </body>
     </form>
-    </head>
 </div>
 
 </body>
