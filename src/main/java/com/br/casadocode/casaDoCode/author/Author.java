@@ -6,8 +6,6 @@ import com.br.casadocode.casaDoCode.enums.Genre;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.NonNull;
-
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.List;

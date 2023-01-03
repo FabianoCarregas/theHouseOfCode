@@ -1,17 +1,18 @@
 package com.br.casadocode.casaDoCode.record;
 
+import com.br.casadocode.casaDoCode.author.Author;
 import com.br.casadocode.casaDoCode.book.Book;
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.joda.time.DateTime;
-
 import javax.persistence.*;
-
-import java.util.List;
-
 import static org.joda.time.DateTime.*;
 
 @Entity
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 public class Recording {
@@ -20,8 +21,11 @@ public class Recording {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToMany
-    private List<Book> books;
+    @ManyToOne
+    private Book book;
+
+    @ManyToOne
+    private Author author;
 
     private DateTime date = now();
 }

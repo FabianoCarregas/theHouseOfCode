@@ -14,11 +14,10 @@
     <div class="row">
         <h1 class="title-wrapper">Book's</h1>
     </div>
-
     <form action="/book" method="get">
         <body>
         <div>
-            <table class="table-wraper-list">
+            <table class="table-wrapper-list">
                 <tr>
                     <th>Name</th>
                     <th>Code</th>
@@ -44,10 +43,6 @@
         </div>
         </body>
     </form>
-
-    <link rel="stylesheet" href="/webjars/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/assets/css/style.css">
-    </head>
 </div>
 
 </body>

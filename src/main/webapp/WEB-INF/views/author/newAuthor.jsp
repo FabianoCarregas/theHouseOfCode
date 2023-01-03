@@ -14,7 +14,6 @@
     <div class="row">
         <h1 class="title-wrapper">New author</h1>
     </div>
-
     <form action="/new/author" method="post" class="form-post">
         <div class="wrapper-row">
             <label class="form-title-label">Name</label>
@@ -51,9 +50,6 @@
             <button type="submit" class="btn-success">SALVAR</button>
         </div>
     </form>
-
-    <link rel="stylesheet" href="/assets/css/style.css">
-    </head>
 </div>
 
 </body>
